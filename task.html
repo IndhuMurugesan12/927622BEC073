@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local Community Event Portal</title>
+
+  <!-- 1. Internal CSS -->
+  <style>
+    /* 2. Universal Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 2. Body Styling */
+    body {
+      background-color: #f4f4f4;
+      background-image: url('https://via.placeholder.com/1500');
+      background-size: cover;
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* 2. Header styles */
+    #mainHeader {
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      padding: 10px;
+      color: white;
+      text-align: center;
+    }
+
+    /* 6. Navigation Styling */
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .nav-menu li a:link {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-menu li a:hover {
+      text-decoration: underline;
+    }
+
+    .nav-menu li a:visited {
+      color: lightgray;
+    }
+
+    .nav-menu li a:active {
+      color: yellow;
+    }
+
+    /* 3. Element selector */
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    /* 3. Grouping Selector */
+    h3, p {
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    /* 3. Class Selector */
+    .eventCard {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin: 20px;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 2. CTA Button Styling */
+    .cta-button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* 5. Typography Enhancements */
+    .news {
+      padding: 20px;
+      background-color: #eaeaea;
+    }
+
+    .news article {
+      column-count: 2;
+      column-gap: 30px;
+      column-rule: 1px solid gray;
+      text-align: justify;
+      letter-spacing: 0.5px;
+    }
+
+    /* 7. Table Styling */
+    table {
+      width: 90%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* 8. Form Field Styling */
+    .form-field {
+      padding: 8px;
+      margin: 10px 0;
+      border: 1px solid #aaa;
+    }
+
+    .form-field:focus {
+      outline: 2px solid #007BFF;
+    }
+
+    /* 8. Box Model Comparison */
+    .hidden-box {
+      visibility: hidden;
+    }
+
+    .none-box {
+      display: none;
+    }
+
+    /* 10. Responsive Design */
+    @media (max-width: 768px) {
+      .nav-menu {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .eventCard {
+        margin: 10px;
+      }
+
+      table {
+        width: 100%;
+      }
+
+      body {
+        font-size: 90%;
+      }
+    }
+  </style>
+
+  <!-- 5. Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- 1. Inline style (Red heading) -->
+  <h1 style="color: red;">Welcome to the Community Event Portal</h1>
+
+  <!-- 3. ID Selector (Header) -->
+  <header id="mainHeader">
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 3. Class Selector (Event Card) -->
+  <div class="eventCard">
+    <h2>Music Fest 2025</h2>
+    <h3>Organized by City Arts</h3>
+    <p>Description: Enjoy live performances, food stalls, and local crafts!</p>
+    <a class="cta-button" href="#">Register Now</a>
+  </div>
+
+  <!-- 9. Multi-column Layout -->
+  <section class="news">
+    <h2>Community Bulletin</h2>
+    <article>
+      <p>
+        Local initiatives, charity drives, and volunteering opportunities are on the rise.
+        Be part of the change and join our weekly meetups every Saturday. Share your ideas
+        and support your neighborhood’s mission to grow greener and kinder!
+      </p>
+    </article>
+  </section>
+
+  <!-- 7. Table Example -->
+  <table>
+    <thead>
+      <tr>
+        <th>Event</th>
+        <th>Date</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Book Fair</td>
+        <td>June 10</td>
+        <td>Library Hall</td>
+      </tr>
+      <tr>
+        <td>Farmers Market</td>
+        <td>June 12</td>
+        <td>Community Park</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 8. Form Fields with Focus -->
+  <form>
+    <label for="name">Name:</label><br />
+    <input type="text" id="name" class="form-field" placeholder="Enter your name" /><br />
+    <button type="submit">Submit</button>
+  </form>
+
+  <!-- 8. Box Model Comparison -->
+  <div class="hidden-box">This box is hidden (visibility: hidden)</div>
+  <div class="none-box">This box is removed from layout (display: none)</div>
+
+  <!-- 11. Debugging Tip -->
+  <!-- TIP: Use Chrome DevTools to inspect elements and test mobile view via the device toolbar. -->
+
+</body>
+</html>
